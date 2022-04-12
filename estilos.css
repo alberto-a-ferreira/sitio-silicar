@@ -505,7 +505,7 @@
         grid-area: encabezado;
         display: flex;
         font-size: medium;
-        background-color: rgb(61, 114, 212);
+        background-image: linear-gradient(to right,deepskyblue, dodgerblue);
     }    
     
     .logo{
@@ -517,11 +517,18 @@
         list-style-type: none;
         display: flex; 
         justify-content: flex-end;
-        background-color: rgb(113, 144, 201);        
+        background-image: linear-gradient(to right,deepskyblue, dodgerblue);        
+        text-transform: uppercase;
     }
+    
     a{
         text-decoration: none;
-        color: white
+        color: white;
+        transition: 1s;        
+    }
+    a:hover{
+        color: blue;
+                
     }
     nav{
         grid-area: nav;  
@@ -561,7 +568,7 @@
     footer{
         grid-area: pie;
         display: flex;
-        background-color: rgb(61, 114, 212); 
+        background-color: dodgerblue; 
         justify-content:space-evenly     
     }
 
@@ -599,12 +606,25 @@
     #cabeza{
         grid-area: cabeza;      
         font-size: medium;
-        background-color: rgb(61, 114, 212);
+        background-image: linear-gradient(to right,deepskyblue, dodgerblue);        
         justify-content:flex-start;
         align-items: center; 
         color: white;   
         
     }
+    .tituloAnimado{
+        animation-name: texto;
+        animation-duration: 1s;
+
+    }
+    @keyframes texto{
+        from{ transform: translateY(-100px)
+    }
+    to{transform: translateY(0)}
+}
+    
+    
+    
     .insumo{
     width: 125px;
     height: 125px; 
